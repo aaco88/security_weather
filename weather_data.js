@@ -24,7 +24,7 @@ const getWeather = async (city) => {
          const response = await axios.get(url);
          return response.data;  // Aquí muestra los datos del clima
    } catch (error) {
-         console.error('Error fetching weather data:', error);
+         return error;
    }
 };
 
