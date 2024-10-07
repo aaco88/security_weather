@@ -1,4 +1,4 @@
-import { getWeather } from './index.js';
+import { getWeather } from './weather_data.js';
 
 test('should fetch weather data', async () => {
    const data = await getWeather('Buenos Aires');
