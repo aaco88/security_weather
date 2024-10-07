@@ -2,7 +2,7 @@
   "name": "security_weather",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "weather_data.js",
   "scripts": {
     "test": "jest"
   },
