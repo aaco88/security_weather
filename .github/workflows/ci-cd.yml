@@ -5,6 +5,26 @@ on:
     branches: [main]
 
 jobs:
+  secret-config:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out the repo
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.18'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Secret token openweather
+      env:
+        WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
+      run: node index.js
+
   build:
     runs-on: ubuntu-latest
 
